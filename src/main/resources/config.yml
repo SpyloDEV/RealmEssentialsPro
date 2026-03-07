@@ -1,0 +1,24 @@
+settings:
+  max-homes: 3
+  tpa-expire-seconds: 60
+  teleport-warmup-seconds: 3
+  use-teleport-warmup: true
+  cancel-on-move: true
+  warp-gui-size: 27
+  homes-gui-size: 27
+  allow-flight-message: true
+join:
+  teleport-to-spawn-on-first-join: true
+  starter-items:
+    enabled: true
+    items:
+      - material: STONE_SWORD
+        amount: 1
+      - material: BREAD
+        amount: 16
+      - material: OAK_LOG
+        amount: 32
+sounds:
+  success: ENTITY_PLAYER_LEVELUP
+  error: ENTITY_VILLAGER_NO
+  click: UI_BUTTON_CLICK

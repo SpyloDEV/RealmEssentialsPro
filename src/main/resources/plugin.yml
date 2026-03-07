@@ -1,0 +1,85 @@
+name: RealmEssentialsPro
+version: '1.0.0'
+main: com.tristan.realmessentialspro.RealmEssentialsPro
+api-version: '1.21'
+authors: [Tristan]
+description: Premium-style essentials plugin with homes, warps, TPA, spawn, utility commands and GUIs.
+website: https://github.com/
+commands:
+  spawn:
+    description: Teleport to spawn
+  setspawn:
+    description: Set server spawn
+    permission: rep.admin.spawn
+  sethome:
+    description: Set a home
+    permission: rep.home
+  home:
+    description: Teleport to a home
+    permission: rep.home
+  delhome:
+    description: Delete a home
+    permission: rep.home
+  homes:
+    description: Open homes GUI
+    permission: rep.home
+  tpa:
+    description: Send teleport request
+    permission: rep.tpa
+  tpahere:
+    description: Ask a player to teleport to you
+    permission: rep.tpa
+  tpaccept:
+    description: Accept teleport request
+    permission: rep.tpa
+  tpdeny:
+    description: Deny teleport request
+    permission: rep.tpa
+  setwarp:
+    description: Set a warp
+    permission: rep.admin.warp
+  warp:
+    description: Teleport to a warp
+    permission: rep.warp
+  delwarp:
+    description: Delete a warp
+    permission: rep.admin.warp
+  warps:
+    description: Open warps GUI
+    permission: rep.warp
+  heal:
+    description: Heal yourself or another player
+    permission: rep.heal
+  feed:
+    description: Feed yourself or another player
+    permission: rep.feed
+  fly:
+    description: Toggle flight
+    permission: rep.fly
+  repair:
+    description: Repair item in hand
+    permission: rep.repair
+  rep:
+    description: Reload the plugin
+    permission: rep.admin.reload
+permissions:
+  rep.home:
+    default: true
+  rep.tpa:
+    default: true
+  rep.warp:
+    default: true
+  rep.heal:
+    default: op
+  rep.feed:
+    default: op
+  rep.fly:
+    default: op
+  rep.repair:
+    default: op
+  rep.admin.warp:
+    default: op
+  rep.admin.spawn:
+    default: op
+  rep.admin.reload:
+    default: op
