@@ -1,46 +1,76 @@
 # RealmEssentialsPro
 
-RealmEssentialsPro is a premium-style Paper plugin designed as a portfolio and marketplace-ready resource.
+RealmEssentialsPro is a Paper plugin for the usual essentials-style server features: homes, warps, teleport requests, spawn handling and a few utility commands.
 
-## Features
+Compared to the smaller `RealmCore` setup, this project is built for a newer Paper version and includes a bit more polish around GUI usage, first-join handling and configurable sounds and warmups.
 
-- Spawn system (`/spawn`, `/setspawn`)
-- Homes system (`/sethome`, `/home`, `/delhome`, `/homes` GUI)
-- Warp system (`/setwarp`, `/warp`, `/delwarp`, `/warps` GUI)
-- Teleport requests (`/tpa`, `/tpahere`, `/tpaccept`, `/tpdeny`)
-- Utility commands (`/heal`, `/feed`, `/fly`, `/repair`)
-- Configurable messages, sounds, cooldown-like warmup behavior
-- YAML persistence for homes, warps, spawn and player first-join state
+## Included systems
+
+- spawn and setspawn
+- homes with list GUI
+- warps with list GUI
+- teleport requests
+- heal, feed, fly and repair
+- first-join spawn handling
+- optional starter items on first join
+- configurable teleport warmup and cancel-on-move behavior
+- configurable success, error and click sounds
+
+## Commands
+
+- `/spawn`
+- `/setspawn`
+- `/sethome`
+- `/home`
+- `/delhome`
+- `/homes`
+- `/tpa`
+- `/tpahere`
+- `/tpaccept`
+- `/tpdeny`
+- `/setwarp`
+- `/warp`
+- `/delwarp`
+- `/warps`
+- `/heal`
+- `/feed`
+- `/fly`
+- `/repair`
+- `/rep`
+
+## Configuration highlights
+
+The current config covers:
+
+- max homes
+- teleport warmup and movement cancel behavior
+- GUI sizes for homes and warps
+- starter items on first join
+- configurable sounds for success, error and button clicks
+
+Configuration files live in:
+
+- `src/main/resources/config.yml`
+- `src/main/resources/messages.yml`
 
 ## Build
 
-Requires:
+Requirements:
+
 - Java 21
 - Maven
+- Paper API `1.21.4-R0.1-SNAPSHOT`
 
-Build with:
+Build command:
 
 ```bash
 mvn clean package
 ```
 
-The output jar will be inside `target/`.
+The plugin is packaged during the Maven build and the output ends up in `target/`.
 
-## Suggested BuiltByBit positioning
+## Notes
 
-Title idea:
-`RealmEssentialsPro | Homes, Warps, TPA, GUI`
-
-Short pitch:
-A clean premium-style essentials core for Paper servers with homes, warps, teleport requests, spawn and admin utilities.
-
-## Git quick start
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - RealmEssentialsPro"
-git branch -M main
-git remote add origin YOUR_GITHUB_REPO_URL
-git push -u origin main
-```
+- storage is YAML-based
+- permissions are defined directly in `plugin.yml`
+- the project is structured as a self-contained Paper plugin rather than a network-wide proxy system
